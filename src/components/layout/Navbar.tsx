@@ -1,5 +1,6 @@
 import { langPaths, profile } from '../../data/profile';
 import { useContent } from '../../i18n';
+import { LangFlag } from '../ui/flags';
 
 export const Navbar = () => {
   const { lang, nav } = useContent();
@@ -34,8 +35,9 @@ export const Navbar = () => {
             lang={otherLang}
             aria-label={nav.switchLabel}
             title={nav.switchLabel}
-            className="rounded-lg border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:border-white/25 hover:text-white"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-white/10 px-2.5 py-1.5 text-xs font-semibold text-slate-300 transition hover:border-white/25 hover:text-white"
           >
+            <LangFlag lang={otherLang} className="h-3 w-[18px] overflow-hidden rounded-[2px] ring-1 ring-white/20" />
             {nav.switchTo}
           </a>
           <a
