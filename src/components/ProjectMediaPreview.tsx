@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Project } from '../types';
+import { useContent } from '../i18n';
 import { TrackingIllustration } from './illustrations/TrackingIllustration';
 import { Lightbox } from './ui';
 
@@ -13,6 +14,7 @@ type ProjectMediaPreviewProps = {
 };
 
 export const ProjectMediaPreview = ({ project, className = '' }: ProjectMediaPreviewProps) => {
+  const { projects: t } = useContent();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { media, illustration } = project;
   const frame = `relative aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-slate-900 ${className}`;
@@ -24,7 +26,7 @@ export const ProjectMediaPreview = ({ project, className = '' }: ProjectMediaPre
           type="button"
           onClick={() => setActiveIndex(0)}
           className={`${frame} group block w-full text-left`}
-          aria-label={`Open ${project.title} screenshots`}
+          aria-label={t.openScreenshots(project.title)}
         >
           <img
             src={media.cover}
@@ -33,8 +35,8 @@ export const ProjectMediaPreview = ({ project, className = '' }: ProjectMediaPre
             className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
           />
           <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-10 text-xs font-medium text-white">
-            <span>View screenshots</span>
-            <span className="rounded-full bg-white/15 px-2.5 py-1 backdrop-blur">{media.gallery.length} images</span>
+            <span>{t.viewScreenshots}</span>
+            <span className="rounded-full bg-white/15 px-2.5 py-1 backdrop-blur">{media.gallery.length} {t.images}</span>
           </span>
         </button>
 

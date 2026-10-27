@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import type { TouchEvent } from 'react';
 import type { ProjectImage } from '../../types';
+import { useContent } from '../../i18n';
 
 type LightboxProps = {
   title: string;
@@ -14,6 +15,7 @@ type LightboxProps = {
 const SWIPE_THRESHOLD = 50;
 
 export const Lightbox = ({ title, images, index, onChange, onClose }: LightboxProps) => {
+  const { gallery: t } = useContent().projects;
   const touchStartX = useRef<number | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const total = images.length;
@@ -53,7 +55,7 @@ export const Lightbox = ({ title, images, index, onChange, onClose }: LightboxPr
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={`${title} screenshots`}
+      aria-label={t.screenshots(title)}
       className="fixed inset-0 z-50 flex flex-col bg-slate-950/95 backdrop-blur-sm"
       onClick={onClose}
     >
@@ -69,9 +71,9 @@ export const Lightbox = ({ title, images, index, onChange, onClose }: LightboxPr
           type="button"
           onClick={onClose}
           className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 transition hover:bg-white/10"
-          aria-label="Close gallery"
+          aria-label={t.closeLabel}
         >
-          Close ✕
+          {t.close} ✕
         </button>
       </div>
 
@@ -104,7 +106,7 @@ export const Lightbox = ({ title, images, index, onChange, onClose }: LightboxPr
               key={image.src}
               type="button"
               onClick={() => goTo(dotIndex)}
-              aria-label={`Go to screenshot ${dotIndex + 1}`}
+              aria-label={t.goTo(dotIndex + 1)}
               className={`h-1.5 rounded-full transition-all ${
                 dotIndex === index ? 'w-6 bg-sky-400' : 'w-1.5 bg-white/25 hover:bg-white/50'
               }`}
@@ -117,18 +119,22 @@ export const Lightbox = ({ title, images, index, onChange, onClose }: LightboxPr
   );
 };
 
-const NavButton = ({ direction, onClick }: { direction: 'prev' | 'next'; onClick: () => void }) => (
+const NavButton = ({ direction, onClick }: { direction: 'prev' | 'next'; onClick: () => void }) => {
+  const { gallery: t } = useContent().projects;
+  return (
   <button
     type="button"
     onClick={(event) => {
       event.stopPropagation();
       onClick();
     }}
-    aria-label={direction === 'prev' ? 'Previous screenshot' : 'Next screenshot'}
+    aria-label={direction === 'prev' ? t.prev : t.next}
     className={`absolute top-1/2 hidden -translate-y-1/2 rounded-full border border-white/10 bg-slate-900/80 p-3 text-lg text-white transition hover:bg-slate-800 md:block ${
       direction === 'prev' ? 'left-5' : 'right-5'
     }`}
   >
     {direction === 'prev' ? '←' : '→'}
   </button>
-);
+
+  );
+};
