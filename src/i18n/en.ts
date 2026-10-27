@@ -226,9 +226,14 @@ export const en: Content = {
   testimonials: {
     eyebrow: 'Testimonials',
     title: 'What clients say',
-    // Agregar aquí el testimonio de BrightCoat cuando el dueño lo apruebe:
-    // { quote: '…', author: 'Nombre Apellido', role: 'Owner, BrightCoat Painting & Remodeling — Austin, TX' }
-    items: [],
+    items: [
+      {
+        quote:
+          'Before working with Javier we ran jobs, payroll and invoicing out of spreadsheets. He built us a web and mobile platform tailored to how we actually work, and now I check jobs, crews and numbers from my phone every day in the field. Reliable, responsive, and easy to work with.',
+        author: 'David Lopez',
+        role: 'Owner, BrightCoat Painting & Remodeling — Austin, TX',
+      },
+    ],
   },
   experience: {
     eyebrow: 'Experience',
