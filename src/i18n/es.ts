@@ -31,7 +31,7 @@ export const es: Content = {
   },
   stats: [
     { value: '4+', label: 'Años llevando software a producción' },
-    { value: '2', label: 'Apps de rastreo en App Store y Google Play' },
+    { value: '500+', label: 'Vehículos rastreados para un solo cliente' },
     { value: 'Diario', label: 'Plataforma en uso por un contratista en EE. UU.' },
     { value: 'ES · EN', label: 'Bilingüe, remoto con EE. UU. y LATAM' },
   ],
@@ -76,7 +76,7 @@ export const es: Content = {
         category: 'Producto de empresa · Seguridad Móvil GPS',
         status: 'production',
         description:
-          'Apps móviles de rastreo de flotas para monitorear vehículos, rutas y personal de campo en tiempo real, publicadas en App Store y Google Play. Lidero su arquitectura, desarrollo y publicaciones.',
+          'Apps móviles de rastreo de flotas para monitorear vehículos, rutas y personal de campo en tiempo real, publicadas en App Store y Google Play. Las usan clientes en Honduras, Guatemala y Nicaragua, con más de 500 vehículos para un solo cliente. Lidero su arquitectura, desarrollo y publicaciones.',
         highlights: [
           'Rastreo de vehículos en vivo e historial de rutas en mapas',
           'Geolocalización continua en segundo plano',
@@ -245,11 +245,11 @@ export const es: Content = {
         company: 'Seguridad Móvil GPS',
         period: 'Dic 2023 – Actualidad',
         highlights: [
-          'Desarrollador líder de dos apps de rastreo de flotas en React Native: Optimus CA/MagnoTrack y Optimus Rutas.',
+          'Desarrollador líder de dos apps de rastreo de flotas en React Native (Optimus CA/MagnoTrack y Optimus Rutas), usadas por clientes en Honduras, Guatemala y Nicaragua, incluida una cuenta con más de 500 vehículos.',
           'Rastreo GPS en tiempo real, historial de rutas, monitoreo de límites de velocidad, visitas a clientes y reportes automáticos.',
           'Geolocalización continua en segundo plano con TransistorSoft e interfaces de mapas para vehículos y personal de campo.',
           'Liderando la migración de Ant Design v4 → v6 de las plataformas web de la empresa.',
-          'Responsable de publicaciones, versiones y despliegues en App Store y Google Play.',
+          'Responsable de versiones y publicaciones en App Store y Google Play mientras la plataforma se expande a Norteamérica.',
         ],
       },
       {
@@ -273,7 +273,7 @@ export const es: Content = {
         ],
       },
       {
-        role: 'Desarrollador Full Stack',
+        role: 'Práctica Profesional en Desarrollo de Software',
         company: 'Seguridad Móvil GPS',
         period: 'Ene 2022 – Jun 2022',
         highlights: ['Herramientas internas y apps web con JavaScript y Node.js, desarrollo de APIs e integración de bases de datos.'],

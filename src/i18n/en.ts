@@ -31,7 +31,7 @@ export const en: Content = {
   },
   stats: [
     { value: '4+', label: 'Years shipping to production' },
-    { value: '2', label: 'Tracking apps live on App Store & Google Play' },
+    { value: '500+', label: 'Vehicles tracked for a single client' },
     { value: 'Daily', label: 'Client platform in use by a U.S. contractor' },
     { value: 'EN · ES', label: 'Bilingual, remote with U.S. & LATAM' },
   ],
@@ -76,7 +76,7 @@ export const en: Content = {
         category: 'Company product · Seguridad Móvil GPS',
         status: 'production',
         description:
-          'Fleet-tracking mobile apps used to monitor vehicles, routes and field personnel in real time, published on the App Store and Google Play. I lead their architecture, development and releases.',
+          'Fleet-tracking mobile apps used to monitor vehicles, routes and field personnel in real time, published on the App Store and Google Play. Used by clients in Honduras, Guatemala and Nicaragua — 500+ vehicles for a single client. I lead their architecture, development and releases.',
         highlights: [
           'Live vehicle tracking and route history on maps',
           'Continuous background geolocation',
@@ -244,11 +244,11 @@ export const en: Content = {
         company: 'Seguridad Móvil GPS',
         period: 'Dec 2023 – Present',
         highlights: [
-          'Lead developer of two React Native fleet-tracking apps: Optimus CA/MagnoTrack and Optimus Rutas.',
+          'Lead developer of two React Native fleet-tracking apps (Optimus CA/MagnoTrack and Optimus Rutas) used by clients in Honduras, Guatemala and Nicaragua, including one account with 500+ vehicles.',
           'Real-time GPS tracking, route history, speed-limit monitoring, client visits and automated reports.',
           'Continuous background geolocation with TransistorSoft and map-based UIs for vehicles and field staff.',
           'Leading the Ant Design v4 → v6 migration of the company’s web platforms.',
-          'Own releases, versioning and deployments to the App Store and Google Play.',
+          'Own versioning and releases on the App Store and Google Play as the platform expands into North America.',
         ],
       },
       {
@@ -272,7 +272,7 @@ export const en: Content = {
         ],
       },
       {
-        role: 'Full Stack Developer',
+        role: 'Software Development Intern',
         company: 'Seguridad Móvil GPS',
         period: 'Jan 2022 – Jun 2022',
         highlights: ['Internal tools and web apps with JavaScript and Node.js, API development and database integration.'],
